@@ -1,24 +1,41 @@
-# React + Vite
+# Frontend - React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository is a minimal React + Vite frontend scaffold used for the assessment. It includes Tailwind CSS and a small component set for a knowledge-base UI.
 
-Currently, two official plugins are available:
+## Quick start
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Install dependencies and start the dev server:
 
-## React Compiler
+```bash
+npm install
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Open the local URL printed by Vite (usually `http://localhost:5173`).
 
-## Expanding the ESLint configuration
+## Project structure (important files)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `src/main.jsx` — app entry
+- `src/App.jsx` — main layout and state (`searchTerm`, `sidebarOpen`, modal state)
+- `src/components/Header.jsx` — top navigation, search, profile
+- `src/components/Sidebar.jsx` — left navigation
+- `src/components/KnowledgeBaseGrid.jsx` — grid layout
+- `src/components/KnowledgeBaseCard.jsx` — individual card UI
+- `public/` — static assets (place `screenshot.png` here)
 
 ## Preview
 
-Add a screenshot of the running app to `public/screenshot.png` and it will show here:
+Add screenshot images in the `public/` folder and they will be embedded below in the rendered README:
 
-![App preview](public/screenshot.png)
+![App preview 1](public/Screenshot%202026-04-02%20204904.png)
+![App preview 2](public/Screenshot%202026-04-02%20204948.png)
 
-If you don't have the image file yet, save your screenshot to `public/screenshot.png` (project root `public` folder) and refresh GitHub or your file viewer to see it embedded above.
+If the preview does not display on your local file viewer, ensure:
+
+- The file exists at `public/screenshot.png` (project root `public` folder).
+- On GitHub, the image will render after you commit and push the file to the repository.
+
+## Notes
+
+- For visual QA, run the dev server and open the app in desktop and mobile emulation to confirm the responsive header, sidebar, and search behavior.
+- If you'd like a smaller thumbnail or a different path (e.g., `docs/screenshot.png`), tell me and I'll update the README accordingly.
